@@ -10,38 +10,33 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TaskList
+namespace TaskList.Pages
 {
     /// <summary>
-    /// Interaction logic for RegisterDetailsWindow.xaml
+    /// Interaction logic for RegisterDetailsPage.xaml
     /// </summary>
-    public partial class RegisterDetailsWindow : Window
+    public partial class RegisterDetailsPage : Page
     {
-        public RegisterDetailsWindow()
+        public RegisterDetailsPage()
         {
             InitializeComponent();
         }
-        public RegisterDetailsWindow(User user, string header, string button)
-        {
-            InitializeComponent();
-            this.HeaderTB.Text = header;
-            this.RegisterButton.Content = button;
-        }
+        //Make 2nd constructor
 
-        public void GetAUser()
-        {
-            //return a user
-        }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = false;
+            NavigationService.Content = new EnterPage();
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = true;
+            //check fiedls
+            //register
+            //show message box
+            NavigationService.Content = new EnterPage();
         }
     }
 }

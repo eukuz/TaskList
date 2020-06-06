@@ -64,11 +64,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MenuWindow.xaml.cs">
-      <DependentUpon>MenuWindow.xaml</DependentUpon>
+    <Compile Include="ContainerForPagesWindow.xaml.cs">
+      <DependentUpon>ContainerForPagesWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegisterDetailsWindow.xaml.cs">
-      <DependentUpon>RegisterDetailsWindow.xaml</DependentUpon>
+    <Compile Include="DB\Task.cs" />
+    <Compile Include="DB\TaskListDB.cs" />
+    <Compile Include="DB\User.cs" />
+    <Compile Include="Pages\EnterPage.xaml.cs">
+      <DependentUpon>EnterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegisterDetailsPage.xaml.cs">
+      <DependentUpon>RegisterDetailsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Task.cs" />
     <Compile Include="TaskListDB.cs" />
@@ -77,30 +89,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EnterWindow.xaml">
+    <Page Include="ContainerForPagesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Pages\EnterPage.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="EnterWindow.xaml.cs">
-      <DependentUpon>EnterWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="MenuWindow.xaml">
+    <Page Include="Pages\MenuPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegisterDetailsWindow.xaml">
+    <Page Include="Pages\RegisterDetailsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,5 +141,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

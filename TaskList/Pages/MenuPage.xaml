@@ -1,0 +1,23 @@
+﻿<Page x:Class="TaskList.Pages.MenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TaskList.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="400"
+      Title="MenuPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Style="{StaticResource DarkInfo}" FontSize="30" TextAlignment="Center"> Employee Name</TextBlock>
+        <Button x:Name="TaskListsBtn" Grid.Row="1" FontSize="30" Click="TaskListsBtn_Click">Списки задач</Button>
+        <Button x:Name="ChangeDataBtn" Grid.Row="2" FontSize="30" Click="ChangeDataBtn_Click">Изменить данные</Button>
+        <Button x:Name="LogOutBtn" Grid.Row="3" FontSize="30" Click="LogOutBtn_Click">Выйти</Button>
+    </Grid>
+</Page>

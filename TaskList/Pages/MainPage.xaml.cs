@@ -12,34 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaskList.Pages;
 
 namespace TaskList
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainPage : Page
     {
-        public MainWindow()
+        public MainPage()
         {
             InitializeComponent();
-
-        }
-        public MainWindow(User user)
-        {
-            InitializeComponent();
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            EnterWindow enterWindow = new EnterWindow();
-            var result = enterWindow.ShowDialog();
         }
 
         private void MenuBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = true;
+            NavigationService.Content = new MenuPage(/* User*/); 
         }
     }
 }

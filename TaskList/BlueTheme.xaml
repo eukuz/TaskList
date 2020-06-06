@@ -5,18 +5,21 @@
         <Setter Property="Margin" Value="1"/>
         <Setter Property="Background" Value="#64b5f6"/>
         <Setter Property="BorderBrush" Value="White"/>
-        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontSize" Value="20"/>
     </Style>
     
     <Style x:Key="DarkInfo" TargetType="TextBlock">
         <Setter Property="FontFamily" Value="Roboto"/>
         <Setter Property="Foreground" Value="#2c387e"/>
+        <Setter Property="FontSize" Value="20"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
+
     <Style TargetType="TextBlock">
         <Setter Property="FontFamily" Value="Roboto"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="20"/>
     </Style>
 
 
@@ -25,7 +28,7 @@
             <Setter Property="FontFamily" Value="Roboto"/>
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="#2c387e"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="20"/>
         </Style.Setters>
 
     </Style>
@@ -33,7 +36,7 @@
         <Setter Property="FontFamily" Value="Roboto"/>
         <Setter Property="Background" Value="White"/>
         <Setter Property="Foreground" Value="#2c387e"/>
-        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontSize" Value="20"/>
     </Style>
     <Style x:Key="WindowBackground" TargetType="Grid">
         <Setter Property="Background" Value="#bbdefb"/>

@@ -1,0 +1,38 @@
+﻿<Page x:Class="TaskList.Pages.EnterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TaskList.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="250" d:DesignWidth="400"
+      Title="EnterPage" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Style="{StaticResource DarkInfo}" Margin="5" >Логин:</TextBlock>
+            <TextBlock Style="{StaticResource DarkInfo}" Margin="5" Grid.Row="1" >Пароль:</TextBlock>
+            <TextBox Margin="5" Grid.Column="1"></TextBox>
+            <PasswordBox Margin="5" Grid.Row="1" Grid.Column="1"></PasswordBox>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="EnterBtn" Margin="5" Click="EnterBtn_Click">Вход</Button>
+            <Button x:Name="OpenRegisterWindowBtn" Grid.Column="1" Margin="5" Click="OpenRegisterWindowBtn_Click">Регистрация</Button>
+        </Grid>
+    </Grid>
+</Page>
