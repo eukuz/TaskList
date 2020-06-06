@@ -23,6 +23,7 @@ namespace TaskList.Pages
     {
         private User user;
 
+
         public MenuPage()
         {
             InitializeComponent();

@@ -82,7 +82,6 @@
     <Compile Include="Pages\RegisterDetailsPage.xaml.cs">
       <DependentUpon>RegisterDetailsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TaskView.cs" />
     <Page Include="BlueTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

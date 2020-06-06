@@ -12,8 +12,8 @@ namespace TaskList.DB
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            Tasks = new HashSet<Task>();
-            Tasks1 = new HashSet<Task>();
+            TasksAssignedFrom = new HashSet<Task>();
+            TasksAssignedTo = new HashSet<Task>();
         }
 
         public int ID { get; set; }
@@ -37,9 +37,9 @@ namespace TaskList.DB
         public bool IsManager { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Task> Tasks { get; set; }
+        public virtual ICollection<Task> TasksAssignedFrom { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Task> Tasks1 { get; set; }
+        public virtual ICollection<Task> TasksAssignedTo { get; set; }
     }
 }

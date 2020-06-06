@@ -44,9 +44,7 @@ namespace TaskList.Pages
             LastNameTB.Text = user.LastName;
             RegisterButton.Content = "Сохранить";
 
-
             isUpdating = true;
-            
         }
 
 
@@ -91,7 +89,14 @@ namespace TaskList.Pages
             }
 
             MessageBox.Show("Успешно!");
-            NavigationService.GoBack();
+            if (isUpdating)
+            {
+                NavigationService.Content = new MenuPage(user);
+            }
+            else
+            {
+                NavigationService.GoBack();
+            }
         }
     }
 }

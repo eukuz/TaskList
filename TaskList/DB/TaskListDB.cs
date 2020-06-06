@@ -18,14 +18,14 @@ namespace TaskList.DB
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
-                .HasMany(e => e.Tasks)
-                .WithRequired(e => e.User)
+                .HasMany(e => e.TasksAssignedFrom)
+                .WithRequired(e => e.UserFrom)
                 .HasForeignKey(e => e.IDFrom)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<User>()
-                .HasMany(e => e.Tasks1)
-                .WithRequired(e => e.User1)
+                .HasMany(e => e.TasksAssignedTo)
+                .WithRequired(e => e.UserTo)
                 .HasForeignKey(e => e.IDTo)
                 .WillCascadeOnDelete(false);
         }

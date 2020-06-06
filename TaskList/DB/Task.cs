@@ -28,8 +28,8 @@ namespace TaskList.DB
         [Column(TypeName = "date")]
         public DateTime? DueDate { get; set; }
 
-        public virtual User User { get; set; }
+        public virtual User UserFrom { get; set; }
 
-        public virtual User User1 { get; set; }
+        public virtual User UserTo { get; set; }
     }
 }
