@@ -23,7 +23,7 @@
         </Grid>
         <Button x:Name="MenuBtn" Click="MenuBtn_Click" Height="37" Margin="1,1,1,0" VerticalAlignment="Top">Меню</Button>
         <ListBox Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Background="#759fcc"></ListBox>
-        <ListBox Grid.Row="1" Grid.RowSpan="2" Background="Transparent"></ListBox>
+        <ListBox x:Name="TaskListsLB" Grid.Row="1" Grid.RowSpan="2" Background="Transparent"></ListBox>
 
         <Grid Grid.Column="2" Grid.RowSpan="2" Background="#9cc3e5">
             <Grid.RowDefinitions>

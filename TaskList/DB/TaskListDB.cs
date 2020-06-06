@@ -18,10 +18,6 @@ namespace TaskList.DB
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
-                .Property(e => e.Password)
-                .IsFixedLength();
-
-            modelBuilder.Entity<User>()
                 .HasMany(e => e.Tasks)
                 .WithRequired(e => e.User)
                 .HasForeignKey(e => e.IDFrom)

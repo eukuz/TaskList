@@ -23,8 +23,8 @@
             </Grid.ColumnDefinitions>
             <TextBlock Style="{StaticResource DarkInfo}" Margin="5" >Логин:</TextBlock>
             <TextBlock Style="{StaticResource DarkInfo}" Margin="5" Grid.Row="1" >Пароль:</TextBlock>
-            <TextBox Margin="5" Grid.Column="1"></TextBox>
-            <PasswordBox Margin="5" Grid.Row="1" Grid.Column="1"></PasswordBox>
+            <TextBox x:Name="LoginTxt" Margin="5" Grid.Column="1"></TextBox>
+            <PasswordBox x:Name="PasswordTxt" Margin="5" Grid.Row="1" Grid.Column="1"></PasswordBox>
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>

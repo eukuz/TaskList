@@ -28,16 +28,16 @@
             <TextBlock x:Name="HeaderTB" Style="{StaticResource DarkInfo}"  FontSize="20" Margin="0" HorizontalAlignment="Center" Grid.ColumnSpan="2">Регистрация нового сотрудника</TextBlock>
 
             <TextBlock  Style="{StaticResource DarkInfo}" Margin="5" Grid.Row="1" FontSize="20">Логин:</TextBlock>
-            <TextBox Margin="5"  Grid.Row="1" Grid.Column="1"></TextBox>
+            <TextBox x:Name="LoginTB" Margin="5"  Grid.Row="1" Grid.Column="1"></TextBox>
 
             <TextBlock Style="{StaticResource DarkInfo}" Margin="5" Grid.Row="2" FontSize="20">Пароль:</TextBlock>
-            <PasswordBox Margin="5" Grid.Row="2" Grid.Column="1"></PasswordBox>
+            <TextBox x:Name="PasswordTB" Margin="5" Grid.Row="2" Grid.Column="1"></TextBox>
 
             <TextBlock Style="{StaticResource DarkInfo}" Margin="5" Grid.Row="3" FontSize="18">Фамилия:</TextBlock>
-            <TextBox Margin="5"  Grid.Row="3" Grid.Column="1"></TextBox>
+            <TextBox x:Name="LastNameTB" Margin="5"  Grid.Row="3" Grid.Column="1"></TextBox>
 
             <TextBlock Style="{StaticResource DarkInfo}" Margin="5" Grid.Row="4" FontSize="20">Имя:</TextBlock>
-            <TextBox Margin="5"  Grid.Row="4" Grid.Column="1"></TextBox>
+            <TextBox x:Name="FirstNameTB" Margin="5"  Grid.Row="4" Grid.Column="1"></TextBox>
 
         </Grid>
         <Grid Grid.Row="1">

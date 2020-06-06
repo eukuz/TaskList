@@ -20,7 +20,7 @@ namespace TaskList.DB
 
         [Required]
         [StringLength(100)]
-        public string FIrstName { get; set; }
+        public string FirstName { get; set; }
 
         [Required]
         [StringLength(100)]

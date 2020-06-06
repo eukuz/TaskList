@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaskList.DB;
 
 namespace TaskList.Pages
 {
@@ -20,19 +21,30 @@ namespace TaskList.Pages
     /// </summary>
     public partial class MenuPage : Page
     {
+        private User user;
+
         public MenuPage()
         {
             InitializeComponent();
         }
 
+        public MenuPage(User user)
+        {
+            InitializeComponent();
+            this.user = user;
+
+            NameLbl.Text = $"{user.FirstName} {user.LastName}";
+            
+        }
+
         private void TaskListsBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Content = new MainPage();
+            NavigationService.Content = new MainPage(user);
         }
 
         private void ChangeDataBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Content = new RegisterDetailsPage(/* User */);
+            NavigationService.Content = new RegisterDetailsPage(user);
         }
 
         private void LogOutBtn_Click(object sender, RoutedEventArgs e)

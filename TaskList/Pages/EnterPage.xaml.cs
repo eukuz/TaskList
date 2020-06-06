@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaskList.DB;
 
 namespace TaskList.Pages
 {
@@ -27,7 +28,19 @@ namespace TaskList.Pages
 
         private void EnterBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Content = new MainPage();
+            using (TaskListDB db = new TaskListDB())
+            {
+                User user = db.Users.Where(u => u.Login == LoginTxt.Text && u.Password == PasswordTxt.Password).FirstOrDefault();
+                if (user != null)
+                {
+                    NavigationService.Content = new MenuPage(user);
+                }
+                else
+                {
+                    MessageBox.Show("Пользователь с такой комбинацией логина и пароля не найден!");
+                }
+            }
+            
             
             //ADD Auth
         }

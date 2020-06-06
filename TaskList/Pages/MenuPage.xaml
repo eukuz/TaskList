@@ -15,7 +15,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Style="{StaticResource DarkInfo}" FontSize="30" TextAlignment="Center"> Employee Name</TextBlock>
+        <TextBlock x:Name="NameLbl" Style="{StaticResource DarkInfo}" FontSize="30" TextAlignment="Center"> Employee Name</TextBlock>
         <Button x:Name="TaskListsBtn" Grid.Row="1" FontSize="30" Click="TaskListsBtn_Click">Списки задач</Button>
         <Button x:Name="ChangeDataBtn" Grid.Row="2" FontSize="30" Click="ChangeDataBtn_Click">Изменить данные</Button>
         <Button x:Name="LogOutBtn" Grid.Row="3" FontSize="30" Click="LogOutBtn_Click">Выйти</Button>
