@@ -98,16 +98,19 @@ namespace TaskList
             switch (LastListPicked)
             {
                 case "AllTasks":
+                    SelectedListNameTxt.Text = "Все задачи";
                     ShowAll();
                     break;
                 case "ActiveTasks":
-
+                    SelectedListNameTxt.Text = "Активные задачи";
                     ShowActive();
                     break;
                 case "CompletedTasks":
-                    ShowCompleted();
+                    SelectedListNameTxt.Text = "Выполненные задачи";
+                    ShowCompleted();        
                     break;
                 case "AssignedByMeTasks":
+                    SelectedListNameTxt.Text = "Назначенные мной задачи";
                     ShowAssignedByMe();
                     break;
 
